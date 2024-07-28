@@ -1,0 +1,224 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+label,
+input,
+select,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a custom font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Apply the custom font */
+}
+
+/* Form container styling */
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    /* Light white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    /* Ensure it's above the background image */
+}
+
+/* Header styling for the form */
+header {
+    text-align: center;
+    /* Center-align header text */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #0056b3;
+    /* Matches the button color */
+    font-weight: 700;
+    /* Make header bold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle text shadow for depth */
+    margin-bottom: 10px;
+    line-height: 1.2;
+    /* Improved spacing for better readability */
+}
+
+p {
+    font-size: 1.2rem;
+    color: #333;
+    /* Darker color for contrast */
+    margin-top: 0;
+    line-height: 1.6;
+    /* Improve spacing */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    /* Make labels bold */
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #0056b3;
+    /* Matches the button color */
+    outline: none;
+}
+
+/* Submit button styling */
+.submit-button {
+    background: #0056b3;
+    /* Matches the button color */
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #003d7a;
+    /* Darker shade for hover effect */
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+/* Result container styling */
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    /* Ensure enough height for centering */
+    text-align: center;
+}
+
+/* Result box styling */
+.result-box {
+    background: rgba(255, 255, 255, 0.9);
+    /* Slightly opaque white background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    /* Limit the width of the box */
+    transition: transform 0.3s ease;
+    /* Smooth transition for the hover effect */
+}
+
+.result-box:hover {
+    transform: scale(1.05);
+    /* Slightly increase the size on hover */
+}
+
+/* Result text styling */
+#result-text {
+    font-size: 2.5rem;
+    /* Larger font size for prominence */
+    color: #333;
+    font-weight: 700;
+    /* Make result text bold */
+    margin-bottom: 20px;
+    line-height: 1.4;
+    /* Improve spacing */
+}
+
+/* Refill link styling */
+.refill-link {
+    display: inline-block;
+    font-size: 1rem;
+    color: #0056b3;
+    /* Matches the button color */
+    text-decoration: none;
+    border: 1px solid #0056b3;
+    /* Matches the button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.refill-link:hover {
+    background: #0056b3;
+    /* Matches the button color */
+    color: #fff;
+}
+
+/* Background image styling */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/formbg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    /* Adjust opacity for fading effect */
+    z-index: -1;
+    /* Place it behind all other content */
+}
+
+/* Footer styling */
+footer {
+    background: rgba(51, 51, 51, 0.8);
+    /* Semi-transparent background */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .submit-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #result-text {
+        font-size: 2rem;
+        /* Adjusted for smaller screens */
+    }
+
+    .refill-link {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
